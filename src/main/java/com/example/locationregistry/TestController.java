@@ -42,7 +42,7 @@ public class TestController {
         return locationService.getAllVisits();
     }
 
-   @PostMapping("/visit")
+   @PostMapping(value = "/visit", consumes = "multipart/form-data")
     public VisitResult saveVisitWithPhoto(
         @RequestParam Double lat,
         @RequestParam Double lon,
